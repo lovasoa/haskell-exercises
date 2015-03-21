@@ -1,5 +1,5 @@
-pgcd a 0 = a
-pgcd a b | a < b = pgcd b a
-pgcd a b = pgcd b (rem a b)
+pgcd a b | b == 0    = a 
+         | a < b     = pgcd b a
+         | otherwise = pgcd b (rem a b)
 
-main = print(pgcd (99*7*102) (3*99*88))
+main = print(pgcd (99*7*103) (3*99))
