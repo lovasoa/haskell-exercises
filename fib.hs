@@ -1,6 +1,7 @@
 bifib 1 = (0, 1)
-bifib n = let prev = bifib (n-1) in (snd prev, fst prev + snd prev)
+bifib n = let prev = bifib (n-1) in
+            (snd prev, fst prev + snd prev)
 
-fib n = snd(bifib n)
+fib = snd.bifib
 
-main = print(fib 2015)
+main = print $ fib 2015
